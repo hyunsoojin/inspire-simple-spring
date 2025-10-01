@@ -24,3 +24,10 @@ $ ./gradlew bootJar
 $ java -jar build/libs/inspire-simple-spring-<VERSION>.jar
 ```
 
+## Remote Run
+```bash
+$ scp -i ~/keys/aws-be2025.pem start.sh ubnutu@52.33.36.165:~/app/inspire-simple-spring/
+
+$ ssh -i <KEY.pem> <IP> "cd ~/app/inspire-simple-spring;./start.sh"
+```
+
