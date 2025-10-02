@@ -37,3 +37,7 @@ $ scp -i ~/keys/aws-be2025.pem stop.sh ubnutu@52.33.36.165:~/app/inspire-simple-
 
 $ ssh -i <KEY.pem> <IP> "cd ~/app/inspire-simple-spring;./stop.sh"
 ```
+
+## Dockerizing
+- https://spring.io/guides/gs/spring-boot-docker
+- openJDK 17
