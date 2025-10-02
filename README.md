@@ -37,3 +37,23 @@ $ scp -i ~/keys/aws-be2025.pem stop.sh ubnutu@52.33.36.165:~/app/inspire-simple-
 
 $ ssh -i <KEY.pem> <IP> "cd ~/app/inspire-simple-spring;./stop.sh"
 ```
+
+## Dockerizing
+- https://spring.io/guides/gs/spring-boot-docker
+- openJDK 17
+
+## 빌드
+```bash
+$ ./gradlew clean bootJar
+$ docker build -t jhs7251/inspire-simple-spring:0.3.0 .
+$ docker images | grep inspire-simple-spring
+jhs7251/inspire-simple-spring   0.3.0       265247c35ce6   3 minutes ago   560MB
+$ docker push jhs7251/inspire-simple-spring:0.3.0
+$ docker stats
+```
+# Docker Run
+```bash
+$ sudo docker run -d --name inspire-simple-spring -p 8080:8080 jhs7251/inspire-simple-spring:0.3.0
+```
+
+
